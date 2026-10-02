@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CHENNAI EATS – Restaurant & Food Delivery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="lib/leaflet.css" />
+<script src="lib/leaflet.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav-wrapper">
+    <a href="#home" class="logo-container" onclick="showAllRestaurants();">
+      <div class="logo-icon">🍲</div>
+      <div class="logo-text"><h1>CHENNAI EATS</h1><span>Authentic Flavors</span></div>
+    </a>
+    <nav class="nav-links">
+      <a href="#restaurants" class="nav-link" onclick="showAllRestaurants();">🍽️ Restaurants</a>
+      <a href="#location-tracker" class="nav-link">📍 Location</a>
+      <button type="button" class="cart-btn-nav" id="cartNavBtn" onclick="scrollToCart();">
+        <span>🛒 Cart</span><span class="cart-badge" id="cartBadgeCount">0</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-tagline"><span>⚡ Superfast Delivery Across Chennai</span></div>
+    <h2 class="hero-title">Taste the Real <span>Chennai Food</span></h2>
+    <p class="hero-subtitle">From aromatic Chettinad biryanis to crispy Marina burgers & golden filter coffee dosas, order directly to your door.</p>
+    <div class="search-wrapper">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search Chennai Spice, Biryani, Burgers, Marina Grill..." autocomplete="off" />
+        <button type="button" class="search-clear-btn" id="searchClearBtn" onclick="clearSearch();" title="Clear search">✕</button>
+        <button type="button" class="search-btn" id="searchBtn" onclick="triggerSearch();"><span>🔍 Search</span></button>
+      </div>
+    </div>
+    <div class="filter-tags">
+      <button type="button" class="filter-chip active" onclick="filterByCategory('All');">✨ All Cuisines</button>
+      <button type="button" class="filter-chip" onclick="filterByCategory('Biryani');">🍗 Biryani & Grill</button>
+      <button type="button" class="filter-chip" onclick="filterByCategory('South Indian');">🥞 South Indian</button>
+      <button type="button" class="filter-chip" onclick="filterByCategory('Burgers');">🍔 Burgers & Fast Food</button>
+      <button type="button" class="filter-chip" onclick="filterByCategory('Tamil Cuisine');">🍛 Tamil Traditional</button>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="search-results-container" id="searchResultsSection">
+    <div class="section-title-wrap">
+      <div>
+        <h2 class="section-title" id="searchResultHeading">Search Results</h2>
+        <p class="section-subtitle" id="searchResultSubheading">Showing matching food items and restaurants</p>
+      </div>
+      <button type="button" class="back-btn" onclick="clearSearch();">✕ Clear Search</button>
+    </div>
+    <div class="food-grid" id="searchFoodGrid"></div>
+  </section>
+
+  <section class="restaurants-section" id="restaurantsSection">
+    <div class="section-title-wrap">
+      <div>
+        <h2 class="section-title">Popular Restaurants in Chennai</h2>
+        <p class="section-subtitle">Select a restaurant to explore authentic menus</p>
+      </div>
+    </div>
+    <div class="restaurant-grid" id="restaurantGrid"></div>
+  </section>
+
+  <section class="menu-view-container" id="menuViewSection">
+    <div class="menu-header-card" id="menuHeaderCard">
+      <div class="menu-header-info">
+        <img src="" alt="Restaurant Thumbnail" class="menu-restaurant-thumb" id="menuThumb" />
+        <div>
+          <h2 class="menu-header-title" id="menuTitle">Restaurant Name</h2>
+          <p class="menu-header-tags" id="menuTags">Category tags</p>
+        </div>
+      </div>
+      <button type="button" class="back-btn" onclick="backToRestaurants();">← Back to Restaurants</button>
+    </div>
+    <div class="section-title-wrap">
+      <div>
+        <h3 class="section-title">Delicious Menu Items</h3>
+        <p class="section-subtitle">Freshly prepared & delivered hot</p>
+      </div>
+    </div>
+    <div class="food-grid" id="menuFoodGrid"></div>
+  </section>
+
+  <section class="cart-section" id="cartSection">
+    <div class="section-title-wrap">
+      <div>
+        <h2 class="section-title">🛒 Your Food Cart</h2>
+        <p class="section-subtitle">Review items and proceed to instant checkout</p>
+      </div>
+      <button type="button" class="back-btn" onclick="clearEntireCart();" id="clearCartBtn" style="display:none;">🗑️ Clear Cart</button>
+    </div>
+    <div class="cart-layout">
+      <div class="cart-items-card"><div id="cartContentArea"></div></div>
+      <div class="cart-summary-card">
+        <h3 class="summary-title">Bill Details</h3>
+        <div class="summary-line"><span>Item Total</span><span id="summarySubtotal">₹0</span></div>
+        <div class="summary-line"><span>Delivery Fee</span><span id="summaryDelivery">₹0</span></div>
+        <div class="summary-line"><span>Taxes & Restaurant Charges (5%)</span><span id="summaryTax">₹0</span></div>
+        <div class="summary-total"><span>To Pay</span><span id="summaryGrandTotal" style="color:var(--primary);">₹0</span></div>
+        <button type="button" class="place-order-btn" id="placeOrderBtn" onclick="placeOrder();"><span>🛍️ Place Order</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-section" id="location-tracker">
+    <div class="section-title-wrap">
+      <div>
+        <h2 class="section-title">📍 Live Delivery Location & Map</h2>
+        <p class="section-subtitle">OpenStreetMap + Leaflet GPS locator & live rider simulation</p>
+      </div>
+    </div>
+    <div class="location-grid">
+      <div class="map-container-box">
+        <div class="map-controls-bar">
+          <button type="button" class="map-btn" id="btnMyLocation" onclick="locateUser();">📍 My Location</button>
+          <button type="button" class="map-btn" id="btnStartLive" onclick="startLiveLocation();">🔴 Start Live Location</button>
+          <button type="button" class="map-btn" id="btnStopLive" onclick="stopLiveLocation();">⏹ Stop Live Location</button>
+          <button type="button" class="map-btn" id="btnManualLocation" onclick="toggleManualLocation();">✋ Change Location</button>
+          <button type="button" class="map-btn" id="btnChennai" onclick="resetToChennai();">🗺️ Chennai</button>
+        </div>
+        <div class="map-search-bar">
+          <input type="text" id="mapAddressInput" class="map-search-input" placeholder="Search Chennai address (e.g., Velammal Engineering College, T Nagar, Marina Beach)..." />
+          <button type="button" class="map-search-submit" onclick="searchAddressOSM();">Search</button>
+        </div>
+        <div id="map"></div>
+      </div>
+
+      <div class="location-details-box">
+        <div>
+          <div class="loc-info-card">
+            <div class="loc-label">Selected Delivery Location</div>
+            <div class="loc-val" id="displayAddress">Chennai Central, Tamil Nadu, India</div>
+          </div>
+          <div class="loc-info-card">
+            <div class="loc-label">Coordinates</div>
+            <div class="loc-val" id="displayCoords">13.0827° N, 80.2707° E</div>
+          </div>
+          <div class="loc-info-card">
+            <div class="loc-label">GPS Accuracy / Mode</div>
+            <div class="loc-val" id="displayAccuracy">Chennai Default</div>
+          </div>
+        </div>
+        <div class="delivery-partner-status">
+          <div class="delivery-header">
+            <div class="delivery-title"><span>🛵 Delivery Partner</span></div>
+            <span class="demo-tag">Demo Tracking</span>
+          </div>
+          <p class="delivery-desc" id="deliveryPartnerStatusText">Rider assigned from Chennai Hub. Simulated delivery will navigate to your selected location upon placing order.</p>
+          <div class="track-status-pill" id="deliveryStatusPill">● Rider Ready</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p><strong>CHENNAI EATS</strong> — College Project Demonstration Food Delivery Website</p>
+    <p style="margin-top:.3rem;">Built with Clean Vanilla HTML, CSS & JavaScript • Leaflet OpenStreetMap</p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="orderModal">
+  <div class="modal-card">
+    <div class="modal-icon">🎉</div>
+    <h3 class="modal-title">✅ Order Placed!</h3>
+    <p class="modal-subtitle">Your delicious Chennai meal is on its way!</p>
+    <div class="modal-details">
+      <div class="modal-detail-row"><span>Order ID:</span><strong id="modalOrderId">#CHE-9482</strong></div>
+      <div class="modal-detail-row"><span>Total Amount:</span><strong id="modalOrderTotal">₹0</strong></div>
+      <div class="modal-detail-row"><span>Delivery Address:</span><strong id="modalOrderAddress" style="text-align:right;max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Chennai Central</strong></div>
+      <div class="modal-detail-row"><span>Estimated Time:</span><strong>25 - 35 mins</strong></div>
+    </div>
+    <div class="modal-actions">
+      <button type="button" class="modal-btn-close" onclick="closeOrderModal();">Close</button>
+      <button type="button" class="modal-btn-track" onclick="trackOrderFromModal();">🛵 Track Order</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
