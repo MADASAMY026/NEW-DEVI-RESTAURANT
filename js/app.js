@@ -2,7 +2,7 @@
 const RESTAURANTS = [
   {
     id: "chennai-spice", name: "Chennai Spice", category: "South Indian • Biryani • Chettinad", rating: 4.8, deliveryTime: "25-30 min",
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=700&auto=format&fit=crop&q=80",
+    image: "https://tse1.mm.bing.net/th/id/OIP.KdnxPmbn6jgqwY5ZM28eTwHaHa?r=0&w=1080&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3",
     foods: [
       { name: "Chicken Biryani", price: 220, desc: "Fragrant Seeraga Samba rice cooked with succulent chicken pieces and Chettinad spices.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/12/1/1c7af522-bf85-4101-af10-0ab488f01d77_dce15c8c-cc2d-4ad4-9367-94c70ffb84d7.jpg_compressed" },
       { name: "Mutton Biryani", price: 280, desc: "Tender slow-cooked mutton biryani served with brinjal curry and onion raita.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/3/4/f1b3e5b8-00fd-46ab-819b-83f9063d0287_d7dfe2c5-95a3-4024-a9f4-194c61ff241f.jpg" },
@@ -27,12 +27,12 @@ const RESTAURANTS = [
       { name: "Chicken Burger", price: 180, desc: "Juicy grilled chicken patty topped with fresh lettuce, melted cheese & house special sauce.", veg: false, image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=80" },
       { name: "Cheese Burger", price: 160, desc: "Double melted cheddar cheese burger with crispy onions, pickles, and creamy mayonnaise.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/8/27/48b995d8-0712-458b-aa71-c50e595a4871_8875163d-6ea5-4a25-9da1-6b1fe455857b.png" },
       { name: "French Fries", price: 100, desc: "Golden crispy potato fries tossed in peri-peri seasoning and sea salt.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/1/14/3d381b1a-6b60-4911-8352-aa7e7213aa5d_ceb99a2c-48ce-4da4-a1d1-4ac0b3ba736c.png" },
-      { name: "Grilled Chicken", price: 240, desc: "Tender whole chicken leg piece marinated in smoke BBQ spices and flame grilled.", veg: false, image: "https:https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/scd9empgjdfeztf5mndy" }
+      { name: "Grilled Chicken", price: 240, desc: "Tender whole chicken leg piece marinated in smoke BBQ spices and flame grilled.", veg: false, image: "https://tse1.explicit.bing.net/th/id/OIP.sOeULuOtY3nDeqnjXEnjVAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" }
     ]
   },
   {
     id: "namma-chennai", name: "Namma Chennai", category: "Tamil Cuisine • Veg • Non-Veg", rating: 4.8, deliveryTime: "25-30 min",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&auto=format&fit=crop&q=80",
+    image: "https://tse3.mm.bing.net/th/id/OIP.9zPaKwhRNbyn7Ys6x9xhewHaES?r=0&w=725&h=420&rs=1&pid=ImgDetMain&o=7&rm=3",
     foods: [
       { name: "Paneer Dosa", price: 130, desc: "Butter roast dosa stuffed with spiced grated paneer and chopped coriander.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/4/22/32c2217c-290d-42da-b930-afe2af443b56_d953381d-fa38-40cb-b232-35c958f400e5.jpg" },
       { name: "Parotta & Chicken", price: 180, desc: "2 flaky layered Malabar parottas served with rich spicy Chennai chicken salna.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1600,h_640,c_fill/RX_THUMBNAIL/IMAGES/VENDOR/2026/2/13/7667253e-d718-4419-abdd-2e9f01214da1_1115067%20.jpg" },
