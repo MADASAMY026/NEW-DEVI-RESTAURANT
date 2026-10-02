@@ -4,20 +4,20 @@ const RESTAURANTS = [
     id: "chennai-spice", name: "Chennai Spice", category: "South Indian • Biryani • Chettinad", rating: 4.8, deliveryTime: "25-30 min",
     image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=700&auto=format&fit=crop&q=80",
     foods: [
-      { name: "Chicken Biryani", price: 220, desc: "Fragrant Seeraga Samba rice cooked with succulent chicken pieces and Chettinad spices.", veg: false, image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500&auto=format&fit=crop&q=80" },
-      { name: "Mutton Biryani", price: 280, desc: "Tender slow-cooked mutton biryani served with brinjal curry and onion raita.", veg: false, image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=500&auto=format&fit=crop&q=80" },
-      { name: "Chicken 65", price: 180, desc: "Crispy, deep-fried spicy chicken bites garnished with curry leaves and lemon wedges.", veg: false, image: "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?w=500&auto=format&fit=crop&q=80" },
-      { name: "Paneer Tikka", price: 170, desc: "Char-grilled cottage cheese cubes marinated in rich spiced yogurt and herbs.", veg: true, image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=500&auto=format&fit=crop&q=80" }
+      { name: "Chicken Biryani", price: 220, desc: "Fragrant Seeraga Samba rice cooked with succulent chicken pieces and Chettinad spices.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/12/1/1c7af522-bf85-4101-af10-0ab488f01d77_dce15c8c-cc2d-4ad4-9367-94c70ffb84d7.jpg_compressed" },
+      { name: "Mutton Biryani", price: 280, desc: "Tender slow-cooked mutton biryani served with brinjal curry and onion raita.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/3/4/f1b3e5b8-00fd-46ab-819b-83f9063d0287_d7dfe2c5-95a3-4024-a9f4-194c61ff241f.jpg" },
+      { name: "Chicken 65", price: 180, desc: "Crispy, deep-fried spicy chicken bites garnished with curry leaves and lemon wedges.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/2/16/f4e8ddee-021d-4f8f-9bd8-60554df49ac3_87eff7e6-788c-4d47-896a-7055b668e012.png_compressed" },
+      { name: "Paneer Tikka", price: 170, desc: "Char-grilled cottage cheese cubes marinated in rich spiced yogurt and herbs.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2025/3/3/c995d23c-2240-44ba-b068-39ce90b2d0ae_50880eac-354b-4a73-bb46-ed550c158322.jpg" }
     ]
   },
   {
     id: "madras-cafe", name: "Madras Cafe", category: "Dosa • Idli • Traditional Meals", rating: 4.9, deliveryTime: "20-25 min",
     image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=700&auto=format&fit=crop&q=80",
     foods: [
-      { name: "Masala Dosa", price: 90, desc: "Crispy golden crepe filled with flavorful spiced potato masala, served with 3 chutneys.", veg: true, image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=500&auto=format&fit=crop&q=80" },
-      { name: "Idli Sambar", price: 70, desc: "Steamed fluffy rice cakes soaked in hot authentic drumstick sambar & coconut chutney.", veg: true, image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500&auto=format&fit=crop&q=80" },
-      { name: "Pongal", price: 80, desc: "Traditional ghee-roasted ven pongal loaded with cashews, black pepper & cumin.", veg: true, image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=500&auto=format&fit=crop&q=80" },
-      { name: "South Indian Meals", price: 150, desc: "Complete thali with steamed rice, sambar, rasam, kootu, poriyal, appalam and curd.", veg: true, image: "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?w=500&auto=format&fit=crop&q=80" }
+      { name: "Masala Dosa", price: 90, desc: "Crispy golden crepe filled with flavorful spiced potato masala, served with 3 chutneys.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/1/17/5265cfa4-67d4-43ba-8aef-6e64c80e5a81_b02db227-5b0e-4e02-8518-db87fd1068cc.JPG" },
+      { name: "Idli Sambar", price: 70, desc: "Steamed fluffy rice cakes soaked in hot authentic drumstick sambar & coconut chutney.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2024/11/19/47094eb4-3c2d-4b65-a1e1-4bdd09acc220_fbcc92e6-796e-4042-8d9d-bfffb483e420.png_compressed" },
+      { name: "Pongal", price: 80, desc: "Traditional ghee-roasted ven pongal loaded with cashews, black pepper & cumin.", veg: true, image: "https://thumbs.dreamstime.com/b/pongal-pongal-sambar-chutny-indian-food-pongal-banana-leaf-side-dish-pongal-pongal-sambar-chutny-south-365738365.jpg" },
+      { name: "South Indian Meals", price: 150, desc: "Complete thali with steamed rice, sambar, rasam, kootu, poriyal, appalam and curd.", veg: true, image: "https://thumbs.dreamstime.com/b/south-indian-meals-ai-generative-image-south-indian-meals-traditional-platter-consisting-rice-sambar-rasam-vegetable-281161781.jpg?w=992" }
     ]
   },
   {
@@ -25,19 +25,19 @@ const RESTAURANTS = [
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&auto=format&fit=crop&q=80",
     foods: [
       { name: "Chicken Burger", price: 180, desc: "Juicy grilled chicken patty topped with fresh lettuce, melted cheese & house special sauce.", veg: false, image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=80" },
-      { name: "Cheese Burger", price: 160, desc: "Double melted cheddar cheese burger with crispy onions, pickles, and creamy mayonnaise.", veg: true, image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=500&auto=format&fit=crop&q=80" },
-      { name: "French Fries", price: 100, desc: "Golden crispy potato fries tossed in peri-peri seasoning and sea salt.", veg: true, image: "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=500&auto=format&fit=crop&q=80" },
-      { name: "Grilled Chicken", price: 240, desc: "Tender whole chicken leg piece marinated in smoke BBQ spices and flame grilled.", veg: false, image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500&auto=format&fit=crop&q=80" }
+      { name: "Cheese Burger", price: 160, desc: "Double melted cheddar cheese burger with crispy onions, pickles, and creamy mayonnaise.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/8/27/48b995d8-0712-458b-aa71-c50e595a4871_8875163d-6ea5-4a25-9da1-6b1fe455857b.png" },
+      { name: "French Fries", price: 100, desc: "Golden crispy potato fries tossed in peri-peri seasoning and sea salt.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/FOOD_CATALOG/IMAGES/CMS/2026/1/14/3d381b1a-6b60-4911-8352-aa7e7213aa5d_ceb99a2c-48ce-4da4-a1d1-4ac0b3ba736c.png" },
+      { name: "Grilled Chicken", price: 240, desc: "Tender whole chicken leg piece marinated in smoke BBQ spices and flame grilled.", veg: false, image: "https:https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/scd9empgjdfeztf5mndy" }
     ]
   },
   {
     id: "namma-chennai", name: "Namma Chennai", category: "Tamil Cuisine • Veg • Non-Veg", rating: 4.8, deliveryTime: "25-30 min",
     image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=700&auto=format&fit=crop&q=80",
     foods: [
-      { name: "Paneer Dosa", price: 130, desc: "Butter roast dosa stuffed with spiced grated paneer and chopped coriander.", veg: true, image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=500&auto=format&fit=crop&q=80" },
-      { name: "Parotta & Chicken", price: 180, desc: "2 flaky layered Malabar parottas served with rich spicy Chennai chicken salna.", veg: false, image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=500&auto=format&fit=crop&q=80" },
-      { name: "Fish Fry", price: 220, desc: "Fresh catch Vanjaram fish slices coated with spicy masala and tawa fried crisp.", veg: false, image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=500&auto=format&fit=crop&q=80" },
-      { name: "Curd Rice", price: 80, desc: "Cooling tempered south Indian curd rice topped with mustard seeds, pomegranate & pickle.", veg: true, image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=500&auto=format&fit=crop&q=80" }
+      { name: "Paneer Dosa", price: 130, desc: "Butter roast dosa stuffed with spiced grated paneer and chopped coriander.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/4/22/32c2217c-290d-42da-b930-afe2af443b56_d953381d-fa38-40cb-b232-35c958f400e5.jpg" },
+      { name: "Parotta & Chicken", price: 180, desc: "2 flaky layered Malabar parottas served with rich spicy Chennai chicken salna.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1600,h_640,c_fill/RX_THUMBNAIL/IMAGES/VENDOR/2026/2/13/7667253e-d718-4419-abdd-2e9f01214da1_1115067%20.jpg" },
+      { name: "Fish Fry", price: 220, desc: "Fresh catch Vanjaram fish slices coated with spicy masala and tawa fried crisp.", veg: false, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/e2xf4hxw8uwgciexcavl" },
+      { name: "Curd Rice", price: 80, desc: "Cooling tempered south Indian curd rice topped with mustard seeds, pomegranate & pickle.", veg: true, image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/FOOD_CATALOG/IMAGES/CMS/2026/3/13/ef8f45e7-2008-4a34-bc45-7aa4f9651d9e_25f32a99-3540-4331-9516-131dc73d0fc1.png_compressed" }
     ]
   }
 ];
